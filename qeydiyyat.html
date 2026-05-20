@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Club - Contact & Footer (Full Format)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Ümumi Sıfırlama və Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #050508; /* Tam qaranlıq kiber fon */
+            color: #ffffff;
+        }
+
+        /* FOOTER SEKSİYASI */
+        .cyber-footer {
+            background-color: #050508;
+            padding: 60px 20px 20px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05); /* Üst tərəfdə incə xətt */
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* 1. Sol hissə: Loqo və Təsvir */
+        .footer-brand {
+            flex: 1.2;
+            min-width: 260px;
+        }
+
+        .footer-brand .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .logo-icon {
+            color: #00d2ff; /* Neon Mavi */
+            font-size: 1.4rem;
+        }
+
+        .brand-text {
+            color: #8a8a98; /* Solğun mətn rəngi */
+            line-height: 1.6;
+            font-size: 0.95rem;
+            max-width: 350px;
+        }
+
+        /* 2. Orta-Sol hissə: Gmail Qeydiyyat Bloku */
+        .footer-subscribe {
+            flex: 1.5; /* Daha geniş sahə tutur */
+            min-width: 280px;
+        }
+
+        .footer-subscribe h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .subscribe-text {
+            color: #8a8a98;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .subscribe-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            color: #555566;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .subscribe-form input {
+            width: 100%;
+            padding: 14px 15px 14px 45px; /* İkon üçün soldan boşluq */
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        /* İnputa klik edildikdə neon mavi parlama */
+        .subscribe-form input:focus {
+            border-color: #00d2ff;
+            background-color: rgba(0, 210, 255, 0.02);
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);
+        }
+
+        .subscribe-form input:focus + .input-icon {
+            color: #00d2ff;
+        }
+
+        /* Qeydiyyat Düyməsi (Register Button) */
+        .subscribe-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #00d2ff, #0072ff); /* Neon mavi qradient */
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.2);
+        }
+
+        .subscribe-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4);
+            background: linear-gradient(135deg, #00e5ff, #0088ff);
+        }
+
+        .subscribe-btn:active {
+            transform: translateY(0);
+        }
+
+        /* 3. Orta-Sağ hissə: Keçidlər (Quick Links) */
+        .footer-links {
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .footer-links h3, .footer-connect h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            color: #8a8a98;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: #00d2ff; /* Hover zamanı neon mavi */
+        }
+
+        /* 4. Sağ hissə: Sosial Şəbəkələr (Connect) */
+        .footer-connect {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(0, 210, 255, 0.3); /* İncə neon mavi çərçivə */
+            border-radius: 6px;
+            color: #00d2ff;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        /* İkonların üzərinə gəldikdə bənövşəyi/çəhrayı neon effekt */
+        .social-icons a:hover {
+            color: #ff007f; 
+            border-color: #ff007f;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* Müəllif Hüquqları Hissəsi (Copyright) */
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 60px auto 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #555566;
+            font-size: 0.85rem;
+        }
+
+        /* Mobil Cihazlar Üçün Responsivlik */
+        @media (max-width: 992px) {
+            .footer-container {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+            }
+            .brand-text {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <footer class="cyber-footer">
+        <div class="footer-container">
+            
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-shield-halved logo-icon"></i>
+                    <span>CYBER CLUB</span>
+                </div>
+                <p class="brand-text">
+                    Empowering the next generation of cybersecurity professionals through education, collaboration, and innovation.
+                </p>
+            </div>
+
+            <div class="footer-subscribe">
+                <h3>Stay Updated</h3>
+                <p class="subscribe-text">Yeniliklərdən və kiber tədbirlərdən xəbərdar olmaq üçün qeydiyyatdan keçin.</p>
+                <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Uğurla qeydiyyatdan keçdiniz!');">
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope input-icon"></i>
+                        <input type="email" placeholder="Gmail ünvanınızı daxil edin" required>
+                    </div>
+                    <button type="submit" class="subscribe-btn">Register</button>
+                </form>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#members">Members</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-connect">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cyber Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
